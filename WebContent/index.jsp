@@ -7,6 +7,10 @@
 <title>Insert title here</title>
 </head>
 <body>
+<%
 
+	String s = System.getProperty("webapp.root");
+%>
+<%=s %>
 </body>
 </html>
