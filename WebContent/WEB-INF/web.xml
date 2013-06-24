@@ -52,9 +52,4 @@
 		<filter-name>struts2</filter-name>
 		<url-pattern>*.action</url-pattern>
 	</filter-mapping>
-
-	<!-- session timeout -->
-	<session-config>
-		<session-timeout>30</session-timeout>
-	</session-config>
 </web-app>
