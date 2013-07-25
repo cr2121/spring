@@ -15,7 +15,14 @@
 
 	<package namespace="/d" name="basicstruts2_1" extends="struts-default">
 		<action name="index">
-			<result>/index2.jsp</result>
+			<result>/index1.jsp</result>
+		</action>
+	</package>
+
+	<package namespace="/" name="basicstruts2_2" extends="struts-default">
+		
+		<action name="home" class="cn.amumu.spring.action.IndexAction">
+			<result>/index.jsp</result>
 		</action>
 	</package>
 </struts>
