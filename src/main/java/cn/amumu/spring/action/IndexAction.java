@@ -1,8 +1,10 @@
 package cn.amumu.spring.action;
 
+import org.hibernate.Session;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import cn.amumu.spring.dao.StudentDao;
+import cn.amumu.spring.orm.Student;
 
 import com.opensymphony.xwork2.ActionSupport;
 
@@ -15,8 +17,8 @@ public class IndexAction extends ActionSupport {
 
 	@Override
 	public String execute() throws Exception {
-		studentDao.loadProductsByCategory("");
-		System.out.println("index.action");
+		Session session = studentDao.getSession();
+		session.get(Student.class, 1);
 		return super.execute();
 	}
 }

@@ -3,6 +3,7 @@
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
     <class name="cn.amumu.spring.orm.Student" table="student" catalog="spring">
+    	<cache usage="read-only" />
         <id name="id" type="java.lang.Integer">
             <column name="id" />
             <generator class="identity" />

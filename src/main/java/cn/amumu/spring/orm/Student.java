@@ -2,8 +2,6 @@ package cn.amumu.spring.orm;
 
 public class Student implements java.io.Serializable {
 
-	private static final long serialVersionUID = -6588947752713529070L;
-
 	private Integer id;
 	private String name;
 	private Integer age;
