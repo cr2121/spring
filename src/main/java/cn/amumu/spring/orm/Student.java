@@ -2,32 +2,22 @@ package cn.amumu.spring.orm;
 
 public class Student implements java.io.Serializable {
 
-	private Integer id;
+	private static final long serialVersionUID = -8425430450416253627L;
+
+	private Long id;
 	private String name;
 	private Integer age;
 
-	public Student() {
+	public Long getId() {
+		return id;
 	}
 
-	public Student(String name) {
-		this.name = name;
-	}
-
-	public Student(String name, Integer age) {
-		this.name = name;
-		this.age = age;
-	}
-
-	public Integer getId() {
-		return this.id;
-	}
-
-	public void setId(Integer id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 
 	public String getName() {
-		return this.name;
+		return name;
 	}
 
 	public void setName(String name) {
@@ -35,7 +25,7 @@ public class Student implements java.io.Serializable {
 	}
 
 	public Integer getAge() {
-		return this.age;
+		return age;
 	}
 
 	public void setAge(Integer age) {
