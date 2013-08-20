@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ehcache xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="ehcache.xsd" updateCheck="false"
+	monitoring="autodetect" dynamicConfig="true">
+
+	<defaultCache maxElementsInMemory="10000" eternal="true"
+		overflowToDisk="true" />
+
+	<cache name="student" maxEntriesLocalHeap="10" eternal="false"
+		timeToIdleSeconds="5" timeToLiveSeconds="10" overflowToDisk="true">
+	</cache>
+
+</ehcache>
