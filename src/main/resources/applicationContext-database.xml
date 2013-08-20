@@ -8,36 +8,10 @@ http://www.springframework.org/schema/tx/spring-tx.xsd">
 
 	<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
 		<property name="driverClass" value="com.mysql.jdbc.Driver" />
-		<property name="jdbcUrl" value="jdbc:mysql://localhost:3306/spring" />
-		<property name="user" value="spring" />
-		<property name="password" value="123456" />
+		<property name="jdbcUrl" value="jdbc:mysql://localhost:3306/test" />
+		<property name="user" value="root" />
+		<property name="password" value="123" />
 		<property name="maxPoolSize" value="4" />
 		<property name="minPoolSize" value="2" />
 	</bean>
-
-	<bean id="sessionFactory"
-		class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
-		<property name="dataSource" ref="dataSource" />
-		<property name="mappingResources">
-			<list>
-				<value>cn/amumu/spring/orm/Student.hbm.xml</value>
-			</list>
-		</property>
-		<property name="hibernateProperties">
-			<value>
-				hibernate.dialect=org.hibernate.dialect.MySQL5Dialect
-				hibernate.show_sql=true
-				hibernate.hbm2ddl.auto=update
-				hibernate.cache.region.factory_class=org.hibernate.cache.ehcache.EhCacheRegionFactory
-				hibernate.cache.use_query_cache=true
-			</value>
-		</property>
-	</bean>
-
-	<bean id="txManager"
-		class="org.springframework.orm.hibernate4.HibernateTransactionManager">
-		<property name="sessionFactory" ref="sessionFactory" />
-	</bean>
-
-	<tx:annotation-driven transaction-manager="txManager" />
 </beans>
