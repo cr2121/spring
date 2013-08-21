@@ -9,6 +9,6 @@ http://www.springframework.org/schema/context/spring-context.xsd">
 
 	<context:component-scan base-package="cn.amumu.spring" />
 
-	<import resource="classpath:applicationContext-cache.xml" />
-	<import resource="classpath:applicationContext-database.xml" />
+	<import resource="classpath:spring/applicationContext-cache.xml" />
+	<import resource="classpath:spring/applicationContext-database.xml" />
 </beans>

@@ -7,6 +7,14 @@ public class Student implements java.io.Serializable {
 	private Long id;
 	private String name;
 	private Integer age;
+	
+	public Student(){
+	}
+
+	public Student(String name, Integer age) {
+		this.name = name;
+		this.age = age;
+	}
 
 	public Long getId() {
 		return id;
