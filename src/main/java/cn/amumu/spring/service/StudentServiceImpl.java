@@ -14,26 +14,34 @@ import cn.amumu.spring.orm.Student;
 
 @Service
 public class StudentServiceImpl implements StudentService {
-	
+
 	@Resource
 	private StudentDao studentDao;
 
 	@Override
-	public Student getFirstStudent() {
-		return studentDao.findById(5L);
+	@Cacheable(value = "student", key = "#studentId")
+	public Student getStudent(long studentId) {
+		return studentDao.findById(studentId);
 	}
 
 	@Override
 	@Transactional
-	@CacheEvict(value="student")
+	@CacheEvict(value = "student", key = "'findAllStudent'")
 	public void saveStudent(Student student) {
 		studentDao.save(student);
 	}
 
 	@Override
-	@Cacheable(value="student")
+	@Cacheable(value = "student", key = "'findAllStudent'")
 	public List<Student> findAll() {
 		return studentDao.findAll();
+	}
+
+	@Override
+	@CacheEvict(value = "student", key = "'findAllStudent'")
+	@CacheEvict(value = "student", key = "#studentId")
+	public void delete(long studentId) {
+		studentDao.delete(studentId);
 	}
 
 }

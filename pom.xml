@@ -85,7 +85,7 @@
 		</dependency>
 		<dependency>
 			<groupId>org.apache.struts</groupId>
-			<artifactId>struts2-core</artifactId>
+			<artifactId>struts2-spring-plugin</artifactId>
 			<version>${struts-version}</version>
 		</dependency>
 		<dependency>
@@ -102,11 +102,6 @@
 			<groupId>jstl</groupId>
 			<artifactId>jstl</artifactId>
 			<version>1.2</version>
-		</dependency>
-		<dependency>
-			<groupId>org.apache.struts</groupId>
-			<artifactId>struts2-spring-plugin</artifactId>
-			<version>${struts-version}</version>
 		</dependency>
 	</dependencies>
 </project>

@@ -4,5 +4,10 @@
     "http://struts.apache.org/dtds/struts-2.0.dtd">
 
 <struts>
+	<constant name="struts.devMode" value="true"></constant>
+	<constant name="struts.locale" value="zh_CN"></constant>
+	<constant name="struts.i18n.encoding" value="utf-8"></constant>
+	<constant name="struts.action.extension" value="action,,"></constant>
+
 	<include file="struts/struts-student.xml"></include>
 </struts>

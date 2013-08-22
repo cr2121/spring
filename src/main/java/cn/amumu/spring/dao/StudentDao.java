@@ -11,4 +11,6 @@ public interface StudentDao {
 	public void save(Student student);
 	
 	public List<Student> findAll();
+
+	public void delete(long studentId);
 }

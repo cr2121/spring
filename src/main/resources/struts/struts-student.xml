@@ -14,5 +14,13 @@
 			<result type="redirect">list.action</result>
 		</action>
 
+		<action name="delete" class="cn.amumu.spring.action.StudentAction" method="deleteStudent">
+			<result type="redirect">list.action</result>
+		</action>
+
+		<action name="get" class="cn.amumu.spring.action.StudentAction" method="findStudent">
+			<result type="redirect">list.action</result>
+		</action>
+
 	</package>
 </struts>

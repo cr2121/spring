@@ -35,6 +35,10 @@
 	<filter>
 		<filter-name>struts2</filter-name>
 		<filter-class>org.apache.struts2.dispatcher.ng.filter.StrutsPrepareAndExecuteFilter</filter-class>
+		<init-param>
+			<param-name>filterConfig</param-name>
+			<param-value>/WEB-INF/classes/struts/struts.xml</param-value>
+		</init-param>
 	</filter>
 
 	<filter-mapping>

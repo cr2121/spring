@@ -29,6 +29,16 @@ public class StudentAction extends ActionSupport {
 		studentService.saveStudent(student);
 		return SUCCESS;
 	}
+	
+	public String deleteStudent() throws Exception {
+		studentService.delete(12L);
+		return SUCCESS;
+	}
+	
+	public String findStudent() throws Exception {
+		studentService.getStudent(12L);
+		return SUCCESS;
+	}
 
 	/*-------------get set method---------------------*/
 	public List<Student> getStudents() {

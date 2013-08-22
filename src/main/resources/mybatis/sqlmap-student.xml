@@ -14,5 +14,9 @@
   <select id="findAll" resultType="Student">
   	select * from student
   </select>
+  
+  <delete id="delete" parameterType="long">
+  	delete from student where id = #{id}
+  </delete>
 
 </mapper>
