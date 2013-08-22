@@ -3,10 +3,10 @@
 	xsi:noNamespaceSchemaLocation="http://ehcache.org/ehcache.xsd"
 	updateCheck="false" monitoring="autodetect" dynamicConfig="true">
 
-	<diskStore path="java.io.temdir/ehcache" />
+	<diskStore path="java.io.tmpdir/ehcache/spring-mybatis-autoscan" />
 	
 	<cache name="student" maxEntriesLocalHeap="10" eternal="false"
-		timeToIdleSeconds="500" timeToLiveSeconds="1000" overflowToDisk="true">
+		timeToIdleSeconds="60" timeToLiveSeconds="0" overflowToDisk="true">
 	</cache>
 
 </ehcache>

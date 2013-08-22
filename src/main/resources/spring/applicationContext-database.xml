@@ -29,7 +29,7 @@ http://www.springframework.org/schema/tx/spring-tx.xsd">
 	
 	<tx:annotation-driven transaction-manager="transactionManager" />
 
-	<bean id="sqlSession" class="org.mybatis.spring.SqlSessionTemplate">
-		<constructor-arg index="0" ref="sqlSessionFactory" />
+	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+		<property name="basePackage" value="cn.amumu.spring.dao" />
 	</bean>
 </beans>

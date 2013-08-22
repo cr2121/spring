@@ -4,6 +4,8 @@ import java.util.List;
 
 import javax.annotation.Resource;
 
+import org.springframework.cache.annotation.CacheEvict;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -17,18 +19,19 @@ public class StudentServiceImpl implements StudentService {
 	private StudentDao studentDao;
 
 	@Override
-	@Transactional
 	public Student getFirstStudent() {
-		return studentDao.getByMapper(5L);
+		return studentDao.findById(5L);
 	}
 
 	@Override
 	@Transactional
+	@CacheEvict(value="student")
 	public void saveStudent(Student student) {
 		studentDao.save(student);
 	}
 
 	@Override
+	@Cacheable(value="student")
 	public List<Student> findAll() {
 		return studentDao.findAll();
 	}

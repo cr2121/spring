@@ -6,12 +6,9 @@ import cn.amumu.spring.orm.Student;
 
 public interface StudentDao {
 	
-	public Student getById(Long id);
-	
-	public Student getByMapper(Long id);
+	public Student findById(Long id);
 	
 	public void save(Student student);
-
+	
 	public List<Student> findAll();
-
 }
