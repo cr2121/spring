@@ -3,7 +3,7 @@
 	xsi:noNamespaceSchemaLocation="http://ehcache.org/ehcache.xsd"
 	updateCheck="false" monitoring="autodetect" dynamicConfig="true">
 
-	<diskStore path="java.io.tempdir" />
+	<diskStore path="java.io.temdir/ehcache" />
 	
 	<cache name="student" maxEntriesLocalHeap="10" eternal="false"
 		timeToIdleSeconds="500" timeToLiveSeconds="1000" overflowToDisk="true">
