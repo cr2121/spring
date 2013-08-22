@@ -2,20 +2,14 @@ package cn.amumu.spring.dao;
 
 import java.util.List;
 
-import javax.annotation.Resource;
-
-import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Component;
 
 import cn.amumu.spring.orm.Student;
 
 @Component
-public class StudentDaoImpl implements StudentDao {
+public class StudentDaoImpl extends BaseDaoImpl implements StudentDao {
 	
-	@Resource
-	private SqlSessionTemplate sqlSession;
-
 	@Cacheable(value = "student")
 	@Override
 	public Student getById(Long id) {
