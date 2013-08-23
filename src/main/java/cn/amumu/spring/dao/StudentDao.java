@@ -2,28 +2,15 @@ package cn.amumu.spring.dao;
 
 import java.util.List;
 
-import org.hibernate.Session;
-import org.hibernate.SessionFactory;
-import org.springframework.stereotype.Repository;
+import cn.amumu.spring.orm.Student;
 
-@Repository
-public class StudentDao {
-
-	private SessionFactory sessionFactory;
-
-	public void setSessionFactory(SessionFactory sessionFactory) {
-		this.sessionFactory = sessionFactory;
-	}
-
-	public void loadProductsByCategory(String category) {
-		List list = this.sessionFactory.getCurrentSession()
-				.createQuery("from Student").list();
-		for (Object o : list) {
-			System.out.println(o);
-		}
-	}
+public interface StudentDao {
 	
-	public Session getSession() {
-		return sessionFactory.getCurrentSession();
-	}
+	public Student findById(Long id);
+	
+	public void save(Student student);
+	
+	public List<Student> findAll();
+
+	public void delete(long studentId);
 }

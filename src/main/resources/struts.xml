@@ -4,25 +4,10 @@
     "http://struts.apache.org/dtds/struts-2.0.dtd">
 
 <struts>
+	<constant name="struts.devMode" value="true"></constant>
+	<constant name="struts.locale" value="zh_CN"></constant>
+	<constant name="struts.i18n.encoding" value="utf-8"></constant>
+	<constant name="struts.action.extension" value="action,,"></constant>
 
-	<package name="basicstruts2_0" extends="struts-default">
-
-		<action name="index">
-			<result>/index.jsp</result>
-		</action>
-
-	</package>
-
-	<package namespace="/d" name="basicstruts2_1" extends="struts-default">
-		<action name="index">
-			<result>/index1.jsp</result>
-		</action>
-	</package>
-
-	<package namespace="/" name="basicstruts2_2" extends="struts-default">
-		
-		<action name="home" class="cn.amumu.spring.action.IndexAction">
-			<result>/index.jsp</result>
-		</action>
-	</package>
+	<include file="struts/struts-student.xml"></include>
 </struts>
