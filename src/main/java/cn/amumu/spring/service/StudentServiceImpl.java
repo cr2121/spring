@@ -6,6 +6,7 @@ import javax.annotation.Resource;
 
 import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.cache.annotation.Cacheable;
+import org.springframework.cache.annotation.Caching;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -38,8 +39,7 @@ public class StudentServiceImpl implements StudentService {
 	}
 
 	@Override
-	@CacheEvict(value = "student", key = "'findAllStudent'")
-	@CacheEvict(value = "student", key = "#studentId")
+	@Caching(evict={@CacheEvict(value = "student", key = "'findAllStudent'"),@CacheEvict(value = "student", key = "#studentId")})
 	public void delete(long studentId) {
 		studentDao.delete(studentId);
 	}
