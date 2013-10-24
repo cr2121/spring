@@ -19,7 +19,7 @@
 	
 	<context-param>
 	      <param-name>log4jRefreshInterval</param-name>
-	      <param-value>6000</param-value>
+	      <param-value>60000</param-value>
 	</context-param>
 	
 	<listener>
