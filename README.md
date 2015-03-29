@@ -5,7 +5,7 @@ spring3 + hibernate4 + struts2
 spring3 + mybatis + struts2
 
 when first run this,
-should change the database setting in applicationContext-database.xml
+shall change the database setting in applicationContext-database.xml
 
     <property name="jdbcUrl" value="jdbc:mysql://localhost:3306/world" />
     <property name="user" value="root" />
