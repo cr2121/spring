@@ -8,5 +8,6 @@
 </head>
 <body>
 Hello SSH!
+<a href="/student/list.action">list all</a>
 </body>
 </html>
