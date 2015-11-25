@@ -8,9 +8,9 @@ http://www.springframework.org/schema/tx/spring-tx.xsd">
 
 	<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
 		<property name="driverClass" value="com.mysql.jdbc.Driver" />
-		<property name="jdbcUrl" value="jdbc:mysql://localhost:3306/test" />
+		<property name="jdbcUrl" value="jdbc:mysql://localhost:3306/world" />
 		<property name="user" value="root" />
-		<property name="password" value="123" />
+		<property name="password" value="123456" />
 		<property name="maxPoolSize" value="4" />
 		<property name="minPoolSize" value="2" />
 	</bean>
